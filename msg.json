@@ -1,0 +1,18 @@
+{
+    "wc_msg":[
+        "Hi. i am doctor robot. how may i help you",
+        "Welcome to my clinic. i am doctor robot here to help you",
+        "I am doctor robot. Welcome to my clinic"
+    ],
+   
+    "excuse_for_sound":[
+        "i could not hear you.",
+        "Say it again. i think there is an issue in your microphone.",
+        "Please resolve you issue"
+    ],
+    "exit_msg":[
+        "goodbye doctor.",
+        "have a nice day."
+    ]
+
+}

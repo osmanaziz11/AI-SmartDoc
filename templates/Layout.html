@@ -1,0 +1,95 @@
+d<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartDoc</title>
+    <!-- Favicon  -->
+    <link
+      rel="shortcut icon"
+      href="assects\media\favicon.jpg"
+      type="image/jpg"
+    />
+    <!-- Index.css  -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='assects/css/index.css') }}">
+    <!-- Bootstrap CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Iconify Script  -->
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+  </head>
+  <body>
+    <!-- Main Container  -->
+    <div class="container rounded shadow" id="app_container">
+      <div class="row h-100">
+        <div class="col h-100">
+        {% block content %}{% endblock %}
+        </div>
+      </div>
+    </div>
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {% block script %}
+     <script>
+            
+            const  assign_symptoms=(e)=>{
+              let value=e.getAttribute('data-id')
+              let count=$('#symptoms_form').children().length;
+            
+              if(count<=11)
+              {
+                $(`<div id='${count}'><input type="text" name="${count}" id="" readonly value="${value}" class="d-inline-block"><span class="iconify" onclick="remove_symptom(this)" data-id="${count}" data-icon="entypo:cross"></span></div>`).insertBefore('.sym_submit_btn')
+              }
+               
+    
+            }
+
+            const remove_symptom=(e)=>{
+              let value=e.getAttribute('data-id')
+              $(`#${value}`).remove()
+            }
+            const sym_form_submit=event=>{
+               event.preventDefault();
+            const form_Data = new FormData(document.getElementById('symptoms_form'));
+            console.log(form_Data);
+            var json_obj = {};
+            form_Data.forEach((value, key) => {
+              json_obj[key]=value;
+            
+            });
+            var json = JSON.stringify(json_obj);
+            console.log(json);
+             $.ajax({
+            url: '/doctor',
+            data: json,
+            contentType: 'application/json;charset=UTF-8',
+            type: 'POST',
+            success: function(response) {
+                
+            }
+            })
+          }
+          </script>
+    
+    {% endblock %}
+  </body>
+</html>
+ 

@@ -1,0 +1,24 @@
+{% extends "Layout.html" %}
+  <!-- Welcome Page  -->
+        {% block content %}
+          <div class="container-fluid h-100" id="wc_page">
+            <div class="row h-100">
+              <div
+                class="col-6 d-flex flex-column justify-content-between align-items-center h-100"
+              >
+                <h3 class="text-center mt-3">Smart-Doc</h3>
+                <p class="text-center">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Culpa quis, blanditiis ut voluptatibus tempora, maxime
+                  aspernatur totam minus dicta fugiat facilis illo, magnam
+                  suscipit vel nemo ducimus sint? Provident, aliquam?
+                </p>
+
+               <a href="clinic"> <span class="iconify" data-icon="whh:enteralt"></span></a>
+              </div>
+              <div class="col-6">
+               <img src="{{url_for('static', filename='assects/media/Hero.png')}}" align="middle" />
+              </div>
+            </div>
+          </div>
+          {% endblock %}

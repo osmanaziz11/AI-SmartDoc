@@ -1,0 +1,29 @@
+{% extends "Layout.html" %}
+
+{% block content %}
+ <!-- Doctor  -->
+          <div class="container-fluid  h-100 p-0" id="doctor_container">
+            <div class="row h-100">
+            
+              <!-- Recommandation Box  -->
+              <div
+                class="col-12 shadow p-4 test_box d-flex flex-column align-items-center"
+              >
+                <h6
+                  class="text-center"
+                  style="
+                    font-family: 'Montserrat';
+                    color: var(--fc-primary-gray);
+                  "
+                >
+                  Reconmandation
+                </h6>
+                <div class="style-bar"></div>
+                <p class="mt-3">
+                {{command}}
+                </p>
+              </div>
+            </div>
+          </div>
+          {% endblock %}
+          

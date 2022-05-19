@@ -1,0 +1,101 @@
+
+{% extends "Layout.html" %}
+
+{% block content %}
+  <!-- Profile builder  -->
+          <div class="container-fluid h-100" id="profile_container">
+            <form action="/profile" method="POST">
+              <div class="row">
+              <div class="col-8">
+                <h4 class="pt-3">Your Profile.</h4>
+                <div class="container-fluid profile_form">
+                  <div class="row my-3">
+                    <div class="col-6">
+                      <h6>First Name</h6>
+                    </div>
+                    <div class="col-6">
+                      <input type="email" name="f_name" id="" />
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col-6">
+                      <h6>Gender</h6>
+                    </div>
+                    <div class="col-6">
+                      <select name="gender" id="">
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col-6">
+                      <h6>Your Age</h6>
+                    </div>
+                    <div class="col-6">
+                      <input type="number" name="age" id="" />
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col-6">
+                      <h6>Blood Pressure</h6>
+                    </div>
+                    <div class="col-6">
+                      <input type="number" name="bp" id="" />
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col-6">
+                      <h6>Weight</h6>
+                    </div>
+                    <div class="col-6">
+                      <input type="number" name="weight" id="" />
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col-6">
+                      <h6>Sugar Level</h6>
+                    </div>
+                    <div class="col-6">
+                      <input type="number" name="sugar" id="" />
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col-6">
+                      <h6>Height</h6>
+                    </div>
+                    <div class="col-6">
+                      <input type="number" name="height" id="" />
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+
+              <div
+                class="col-4 p-2 flex-column d-flex justify-content-between align-items-center"
+              >
+                <div id="image-box">
+                  <label for="adminImage">
+                    <img src="static/assects/media/Default.png" alt="" />
+                  </label>
+                  <input
+                    type="file"
+                    name="adminImage"
+                    id="adminImage"
+                    data-id="image-container"
+                    class="file"
+                    hidden=""
+                  />
+                </div>
+                <input type="submit" value="Save" />
+              </div>
+            </div>
+            </form>
+            <div class="row">
+              <div class="col">
+               <a href="clinic"> <span style="font-size: 30px; color: rgb(0, 0, 0) !important" class="iconify" data-icon="emojione-v1:back-arrow"></span></a>
+              </div>
+            </div>
+          </div>
+{% endblock  %}

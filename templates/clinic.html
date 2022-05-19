@@ -1,0 +1,72 @@
+
+  {% extends "Layout.html" %}
+
+{% block content %}
+  
+  <!-- Clinic Page  -->
+          <div class="container-fluid h-100" id="clinic_page">
+            <div class="row mt-3">
+              <div
+                class="col d-inline-flex justify-content-center align-items-center"
+              >
+                <h3 class="text-center p-2">Welcome to Clinic</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+               <a href="profile">
+                  <div class="box rounded shadow">
+                  <span class="iconify" data-icon="icomoon-free:profile"></span>
+                  <h6>Profile</h6>
+                </div>
+               </a>
+              </div>
+              <div class="col-4">
+               <a href="doctor">
+                  <div class="box rounded shadow">
+                  <span
+                    class="iconify"
+                    data-icon="fluent:doctor-48-filled"
+                  ></span>
+                  <h6>Doctor</h6>
+                </div>
+               </a>
+              </div>
+              <div class="col-4">
+              <a href="report">
+                  <div class="box rounded shadow">
+                  <span class="iconify" data-icon="iconoir:stats-report"></span>
+                  <h6>Reports</h6>
+                </div>
+              </a>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-4">
+                <div class="box rounded shadow">
+                  <span
+                    class="iconify"
+                    data-icon="healthicons:medicines"
+                  ></span>
+                  <h6>Prevention</h6>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="box rounded shadow">
+                  <span
+                    class="iconify"
+                    data-icon="majesticons:information-circle"
+                  ></span>
+                  <h6>About</h6>
+                </div>
+              </div>
+              <div class="col-4">
+                <a href="/"><div class="box rounded shadow">
+                  <span class="iconify" data-icon="uil:exit"></span>
+                  <h6>Exit</h6>
+                </div></a>
+              </div>
+            </div>
+          </div>
+        
+    {% endblock %}

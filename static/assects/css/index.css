@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+}
+:root {
+  --primary-bg: #ffffff;
+  --secondary-bg: #edeff0;
+  --secondary-bg-white: #f7f7f7;
+  --secondary-bg-black: #282828;
+  --font-poppins: "Poppins", sans-serif;
+  --font-mont: "Montserrat", sans-serif;
+  --fc-primary: #ffffff;
+  --fc-secondary: #282828;
+  --fc-primary-gray: #8b8b8b;
+  --fc-secondary-gray: #7a7a8f;
+}
+
+/* App Container  */
+#app_container {
+  overflow: hidden;
+  height: 400px;
+  width: 700px;
+}
+#wc_page h3 {
+  background-color: var(--fc-secondary);
+  color: var(--fc-primary);
+  padding: 10px;
+  font-family: var(--font-mont);
+}
+#wc_page .iconify {
+  font-family: var(--font-mont);
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.5s;
+  position: relative;
+  bottom: 30px;
+}
+#wc_page a{
+  color: var(--fc-secondary) !important;
+}
+#wc_page .iconify:hover {
+  transform: scale(1.1);
+}
+#wc_page p {
+  color: var(--fc-secondary-gray);
+  font-family: var(--font-mont);
+}
+#wc_page .row .col-6:nth-child(2) {
+  background-color: var();
+}
+/* Clinic  */
+#clinic_page h3 {
+  font-family: var(--font-mont);
+  color: var(--fc-primary-gray);
+  /* background-color: var(--secondary-bg-black); */
+}
+#clinic_page h6 {
+  font-family: var(--font-mont);
+  color: var(--fc-secondary);
+
+  /* background-color: var(--secondary-bg-black); */
+}
+#clinic_page a{
+  color: var(--fc-secondary) !important;
+  text-decoration: none;
+}
+#clinic_page .box {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#clinic_page .box .iconify {
+  font-size: 30px;
+  margin-bottom: 15px;
+  transition: all 0.5s;
+}
+#clinic_page .box:hover .iconify {
+  transform: scale(1.3);
+}
+
+/* Profile */
+#profile_container h4 {
+  font-family: var(--font-mont);
+  color: var(--fc-primary-gray);
+}
+#profile_container h6 {
+  font-family: var(--font-mont);
+}
+#profile_container input {
+  /* border: none; */
+  outline: none;
+  padding-left: 5px;
+  border-bottom-width: 3px;
+  background-color: var(--secondary-bg-white);
+  border-style: solid;
+  border-image: linear-gradient(red, purple) 4 100%;
+  /* background: linear-gradient(to right, red, purple); */
+}
+
+#image-box label {
+  height: 100%;
+  width: 100%;
+}
+
+#image-box {
+  width: 150px;
+  height: 150px;
+}
+
+#image-box img {
+  width: 100%;
+  clip-path: circle();
+  height: 100%;
+  cursor: pointer;
+  object-fit: cover;
+  object-position: top;
+}
+#image-box input{
+  width: 50%;
+  color: white !important;
+  background-color: var(--secondary-bg-black) !important;
+}
+/* Doctor  */
+.search_box {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid var(--secondary-bg);
+}
+.symptoms {
+  list-style: none;
+  padding: 0;
+  height: 80%;
+  overflow: scroll;
+}
+.symptoms li {
+  font-family: var(--font-mont);
+  font-size: 12px;
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.search_box input {
+  width: 80%;
+  position: absolute;
+  outline: none;
+  height: 100%;
+  border: none;
+  /* border-bottom: 2px solid var(--secondary-bg); */
+  font-family: var(--font-mont);
+  font-size: 13px;
+}
+.search_box .iconify {
+  right: 0;
+  top: 4px;
+  font-size: 20px;
+  position: absolute;
+}
+#doctor_container .sel_sym {
+  font-family: var(--font-mont);
+  color: var(--fc-primary-gray);
+  font-size: 13px;
+  position: relative;
+}
+#symptoms_form input{
+  /* background:none; */
+  border: none;
+  outline: none;
+}
+#doctor_container .sel_sym button {
+  font-family: var(--font-mont);
+  color: var(--fc-primary);
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  background: var(--secondary-bg-black);
+  border: none;
+  padding: 5px;
+  width: 150px;
+}
+
+#doctor_container .test_box {
+}
+.test_box p {
+  font-family: var(--font-mont);
+  color: var(--fc-primary-gray);
+  text-align: center;
+  font-size: 12px;
+}
+.style-bar {
+  width: 50px;
+  height: 2px;
+  background: var(--fc-secondary);
+}
+.proceed {
+  font-family: var(--font-mont);
+  color: var(--fc-primary);
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  background: var(--secondary-bg-black);
+  border: none;
+  padding: 5px;
+  width: 150px;
+}
+
+#report_container .style-bar {
+  left: 33px !important;
+  transform: translateX(-50%) !important;
+  position: absolute;
+}
+.report_form {
+  font-size: 12px;
+}
+.report_form input {
+  border: none;
+  outline: none;
+  text-align: end;
+}

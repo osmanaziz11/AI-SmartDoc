@@ -1,0 +1,54 @@
+{% extends "Layout.html" %}
+
+{% block content %}
+ <!-- Doctor  -->
+          <div class="container-fluid  h-100 p-0" id="doctor_container">
+            <div class="row h-100">
+              <!-- Search in Symptoms -->
+              <div class="col-3 shadow h-100">
+                <div class="my-3 search_box position-relative">
+                  <input
+                    type="text"
+                    name="search"
+                    id="search"
+                    placeholder="Search Symptoms  " onkeyup="search_symptoms()"
+                  />
+                  <span class="iconify" data-icon="bx:bx-search"></span>
+                </div>
+                <ul class="symptoms">
+                  {% for key in symptoms.keys() %}
+                  <li class="my-2" data-id="{{key}}" onclick="assign_symptoms(this)">{{key}}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <!-- Selected Symptoms  -->
+              <div class="col-5 p-4 sel_sym" id="">
+                <p class="mb-4">Select Maximum 10 Symptoms.</p>
+                <form action="" id="symptoms_form" onsubmit="sym_form_submit(event)">
+                  <button class="sym_submit_btn">Proceed</button>
+                </form>
+                
+              </div>
+              <!-- Recommandation Box  -->
+              <div
+                class="col-4 shadow p-4 test_box d-flex flex-column align-items-center"
+              >
+                <h6
+                  class="text-center"
+                  style="
+                    font-family: 'Montserrat';
+                    color: var(--fc-primary-gray);
+                  "
+                >
+                  Reconmandation
+                </h6>
+                <div class="style-bar"></div>
+                <p class="mt-3">
+                You might have Fungal Infection.
+                Goto Prevention section for more details.
+                </p>
+              </div>
+            </div>
+          </div>
+          {% endblock %}
+          

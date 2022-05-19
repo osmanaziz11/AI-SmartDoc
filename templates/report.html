@@ -1,0 +1,120 @@
+ 
+{% extends "Layout.html" %}
+
+{% block content %}
+ 
+ <!-- Reports  -->
+          <div
+            class="container-fluid h-100 p-0"
+            id="report_container position-relative"
+          >
+            <div class="row h-100">
+              <!-- Search in Test -->
+              <div class="col-3 shadow h-100">
+                <div class="my-3 search_box position-relative">
+                  <input type="email" name="" id="" placeholder="Search Test" />
+                  <span class="iconify" data-icon="bx:bx-search"></span>
+                </div>
+                <ul class="symptoms">
+                  <li class="my-2">Blood Test</li>
+                  <li class="my-2">LFTP</li>
+                  <li class="my-2">ECG</li>
+                  <li class="my-2">Endoscopy</li>
+                </ul>
+              </div>
+              <!-- Test Area  -->
+              <div class="col-5 p-4 test_area position-relative">
+                <h6
+                  class="text-center"
+                  style="
+                    font-family: 'Montserrat';
+                    color: var(--fc-primary-gray);
+                  "
+                >
+                  Fill the Report
+                </h6>
+                <div
+                  class="style-bar"
+                  style="
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                  "
+                ></div>
+                <div class="container-fluid p-0 report_form my-4">
+                  <div class="row my-2">
+                    <div class="col-4">Test Name</div>
+                    <div class="col-8">
+                      <input type="email" name="" id="" value="Blood Test" />
+                    </div>
+                  </div>
+                  <div class="row my-2">
+                    <div class="col-4">Patient Id</div>
+                    <div class="col-8">
+                      <input type="number" name="" id="" />
+                    </div>
+                  </div>
+                  <div class="row my-2">
+                    <div class="col-4">HbsAg</div>
+                    <div class="col-8">
+                      <input type="number" name="" id="" />
+                    </div>
+                  </div>
+                  <div class="row my-2">
+                    <div class="col-4">HCV</div>
+                    <div class="col-8">
+                      <input type="number" name="" id="" />
+                    </div>
+                  </div>
+                  <div class="row my-2">
+                    <div class="col-4">HIP</div>
+                    <div class="col-8">
+                      <input type="number" name="" id="" />
+                    </div>
+                  </div>
+                  <div class="row my-2">
+                    <div class="col-4">WBC</div>
+                    <div class="col-8">
+                      <input type="number" name="" id="" />
+                    </div>
+                  </div>
+                  <div class="row my-2">
+                    <div class="col-4">RBC</div>
+                    <div class="col-8">
+                      <input type="number" name="" id="" />
+                    </div>
+                  </div>
+                  <div class="row my-2">
+                    <div class="col-4">Palelts</div>
+                    <div class="col-8">
+                      <input type="number" name="" id="" />
+                    </div>
+                  </div>
+                </div>
+                <button class="proceed">Proceed</button>
+              </div>
+
+              <!-- Recommandation Box  -->
+              <div
+                class="col-4 shadow p-4 test_box d-flex flex-column align-items-center"
+              >
+                <h6
+                  class="text-center"
+                  style="
+                    font-family: 'Montserrat';
+                    color: var(--fc-primary-gray);
+                  "
+                >
+                  Reconmandation
+                </h6>
+                <div class="style-bar"></div>
+                <p class="mt-3">
+                  According to the result and symptoms of yours you might have
+                  Dengue Fever. Please Go to Prevention Section and check what
+                  antibiotics you can use or other stuff.
+                </p>
+              </div>
+            </div>
+          </div>
+
+{% endblock  %}
